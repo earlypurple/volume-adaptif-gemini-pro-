@@ -4,9 +4,9 @@
  */
 
 const DEFAULT_SETTINGS = {
-    isEnabled: false,
-    sensitivity: 1.5,
-    eqEnabled: true,
+  isEnabled: false,
+  sensitivity: 1.5,
+  eqEnabled: true,
 };
 
 /**
@@ -15,7 +15,7 @@ const DEFAULT_SETTINGS = {
  * @returns {string} The formatted storage key.
  */
 function getKeyForDomain(domain) {
-    return `settings_${domain || 'default'}`;
+  return `settings_${domain || 'default'}`;
 }
 
 /**
@@ -24,15 +24,15 @@ function getKeyForDomain(domain) {
  * @returns {Promise<{isEnabled: boolean, sensitivity: number, eqEnabled: boolean}>}
  */
 async function getSettings(domain) {
-    const key = getKeyForDomain(domain);
-    try {
-        const result = await chrome.storage.local.get(key);
-        // Merge with defaults to ensure the settings object is always complete
-        return { ...DEFAULT_SETTINGS, ...result[key] };
-    } catch (e) {
-        console.error(`StorageService: Failed to get settings for key "${key}"`, e);
-        return DEFAULT_SETTINGS;
-    }
+  const key = getKeyForDomain(domain);
+  try {
+    const result = await chrome.storage.local.get(key);
+    // Merge with defaults to ensure the settings object is always complete
+    return { ...DEFAULT_SETTINGS, ...result[key] };
+  } catch (e) {
+    console.error(`StorageService: Failed to get settings for key "${key}"`, e);
+    return DEFAULT_SETTINGS;
+  }
 }
 
 /**
@@ -42,16 +42,18 @@ async function getSettings(domain) {
  * @returns {Promise<void>}
  */
 async function saveSettings(domain, settings) {
-    const key = getKeyForDomain(domain);
-    try {
-        await chrome.storage.local.set({ [key]: settings });
-    } catch (e) {
-        console.error(`StorageService: Failed to save settings for key "${key}"`, e);
-    }
+  const key = getKeyForDomain(domain);
+  try {
+    await chrome.storage.local.set({ [key]: settings });
+  } catch (e) {
+    console.error(`StorageService: Failed to save settings for key "${key}"`, e);
+  }
 }
 
 // Public API for the service
-export const storageService = {
-    getSettings,
-    saveSettings,
+const storageService = {
+  getSettings,
+  saveSettings,
 };
+
+export default storageService;

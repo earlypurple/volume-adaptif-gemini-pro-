@@ -11,7 +11,7 @@
  * @param {number} wait The number of milliseconds to delay.
  * @returns {Function} Returns the new debounced function.
  */
-export function debounce(func, wait) {
+export default function debounce(func, wait) {
   let timeout;
 
   // This is the function that will be returned and called

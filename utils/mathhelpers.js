@@ -29,7 +29,7 @@ export function linearToDb(linearValue) {
 export function mapRange(value, inMin, inMax, outMin, outMax) {
   // Clamp the value to the input range to avoid weird results
   const clampedValue = Math.max(inMin, Math.min(value, inMax));
-  
+
   // Perform the linear mapping
   return ((clampedValue - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 }
@@ -43,5 +43,5 @@ export function mapRange(value, inMin, inMax, outMin, outMax) {
  * @returns {number} The new, smoothed value.
  */
 export function smooth(currentValue, targetValue, smoothingFactor) {
-    return currentValue * (1 - smoothingFactor) + targetValue * smoothingFactor;
+  return currentValue * (1 - smoothingFactor) + targetValue * smoothingFactor;
 }

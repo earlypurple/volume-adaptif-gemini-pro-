@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Adaptive Volume</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="../public/icons/icon-main.svg" alt="logo" class="logo">
+            <h1>Adaptive Volume</h1>
+            <label class="switch">
+                <input type="checkbox" id="master-toggle">
+                <span class="slider round"></span>
+            </label>
+        </header>
+
+        <main class="controls" id="controls-panel">
+            <div class="control-group" id="sensitivity-slider-container">
+                <!-- The slider will be created here by slider.js -->
+            </div>
+            <div class="control-group">
+                <label for="eq-toggle" class="checkbox-label">
+                    <span>Égaliseur Intelligent</span>
+                    <small>Réduit les bruits de fond</small>
+                </label>
+                <label class="switch small">
+                    <input type="checkbox" id="eq-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p id="status-message">Désactivé</p>
+        </footer>
+    </div>
+    <script type="module" src="popup.js"></script>
+</body>
+</html>
