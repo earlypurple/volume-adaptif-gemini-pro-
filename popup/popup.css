@@ -1,0 +1,183 @@
+/**
+ * @file popup/popup.css
+ * @description Styles for the extension's popup UI.
+ */
+
+:root {
+    --primary-color: #2563eb;
+    --background-color: #f8fafc;
+    --text-color: #1f2937;
+    --muted-color: #6b7280;
+    --border-color: #e5e7eb;
+    --white: #ffffff;
+    --slider-track-bg: #d1d5db;
+    --slider-thumb-bg: var(--primary-color);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    width: 280px;
+}
+
+.container {
+    padding: 16px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.header h1 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.controls.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.control-group {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-label span {
+    font-weight: 500;
+}
+
+.checkbox-label small {
+    font-size: 0.75rem;
+    color: var(--muted-color);
+}
+
+
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 8px;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--muted-color);
+}
+
+/* --- Generic Switch Component --- */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+.switch.small {
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--slider-track-bg);
+    transition: .4s;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+.switch.small .slider:before {
+    height: 14px;
+    width: 14px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+.switch.small input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* --- Slider component from slider.js will be styled here --- */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: var(--slider-track-bg);
+  border-radius: 4px;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: var(--slider-thumb-bg);
+  cursor: pointer;
+  margin-top: -6px; /* You need to specify a margin in Chrome, but not in Firefox */
+}
