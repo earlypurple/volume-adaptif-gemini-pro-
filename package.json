@@ -1,0 +1,32 @@
+{
+  "name": "adaptive-volume-ultimate",
+  "version": "1.5.0",
+  "description": "Solution audio intelligente pour des conférences web parfaitement claires.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "build": "echo \"Build script not implemented. For now, manually create a zip from the project files.\"",
+    "package": "zip -r adaptive-volume-ultimate.zip . -x 'node_modules/*' '.*' '*.zip'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VOTRE_NOM/adaptive-volume-ultimate.git"
+  },
+  "keywords": [
+    "webrtc",
+    "audio",
+    "volume",
+    "chrome-extension",
+    "web-audio-api"
+  ],
+  "author": "Votre Nom <votre.email@example.com>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.2.5",
+    "zip-cli": "^0.0.4"
+  }
+}

@@ -1,0 +1,26 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="1200" height="630" fill="url(#grad_bg)"/>
+  <defs>
+    <linearGradient id="grad_bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFF6FF"/>
+      <stop offset="1" stop-color="#DBEAFE"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo -->
+  <g transform="translate(100, 250) scale(1.5)">
+    <circle cx="50" cy="50" r="45" fill="#3B82F6"/>
+    <path d="M30 38V62 M50 28V72 M70 42V58" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="350" y="280" font-family="Inter, sans-serif" font-size="72" font-weight="900" fill="#111827">
+    Ne subissez plus le bruit.
+  </text>
+  <text x="350" y="360" font-family="Inter, sans-serif" font-size="36" font-weight="500" fill="#1F2937">
+    Adaptive Volume Ultimate
+  </text>
+  <text x="350" y="410" font-family="Inter, sans-serif" font-size="24" font-weight="400" fill="#4B5563">
+    La clarté audio parfaite pour vos conférences web.
+  </text>
+</svg>

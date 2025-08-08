@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Volume Ultimate - La clarté audio pour professionnels</title>
+    <!-- Link to the favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(120deg, #eff6ff 0%, #dbeafe 100%); }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header -->
+    <header class="absolute w-full z-10 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="icons/icon-main.svg" alt="Logo" class="h-8 w-8">
+                <span class="font-bold text-xl text-gray-800">Adaptive Volume</span>
+            </div>
+            <a href="#pricing" class="bg-blue-600 text-white font-bold py-2 px-5 rounded-full hover:bg-blue-700 transition-colors">Obtenir</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-black text-gray-900 mb-4 leading-tight">Ne subissez plus le bruit.</h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">Adaptive Volume ajuste intelligemment le son de vos conférences web pour une clarté parfaite, quel que soit votre environnement.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#pricing" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-700 transition-transform transform hover:scale-105">Acheter Maintenant</a>
+                <a href="https://chrome.google.com/webstore" target="_blank" class="bg-white text-gray-800 font-bold py-3 px-8 rounded-full text-lg border border-gray-300 hover:bg-gray-100 transition-transform transform hover:scale-105">Ajouter à Chrome</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Une technologie au service de vos oreilles.</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center">
+                    <img src="icons/icon-soundwave.svg" alt="Onde sonore" class="h-16 w-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Ajustement Dynamique</h3>
+                    <p class="text-gray-600">Le volume de vos interlocuteurs augmente ou diminue en temps réel pour couvrir le bruit ambiant, sans que vous n'ayez rien à faire.</p>
+                </div>
+                <div class="text-center">
+                     <img src="icons/icon-main.svg" alt="Égaliseur" class="h-16 w-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Égaliseur Intelligent</h3>
+                    <p class="text-gray-600">Préserve la clarté des voix en réduisant uniquement les fréquences des bruits de fond (claviers, climatisation...).</p>
+                </div>
+                <div class="text-center">
+                    <img src="icons/icon-soundwave.svg" alt="Compatibilité" class="h-16 w-16 mx-auto mb-4" style="transform: rotate(90deg);">
+                    <h3 class="text-xl font-bold mb-2">Compatibilité Universelle</h3>
+                    <p class="text-gray-600">Fonctionne avec Google Meet, Microsoft Teams, Zoom et toutes vos plateformes de conférence web préférées.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="bg-gray-50 py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-2">Un tarif simple et clair.</h2>
+            <p class="text-lg text-gray-600 mb-10">Une licence à vie. Toutes les mises à jour incluses.</p>
+            <div class="inline-block bg-white p-8 rounded-2xl shadow-lg border">
+                <p class="text-lg font-semibold">Licence Adaptive Volume</p>
+                <p class="text-6xl font-black my-4">14,99€</p>
+                <p class="text-gray-500 mb-6">Paiement unique</p>
+                <button id="buy-button" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-colors">Acheter avec Stripe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 Adaptive Volume. Tous droits réservés.</p>
+            <a href="#" class="text-sm hover:underline">Politique de Confidentialité</a>
+        </div>
+    </footer>
+
+</body>
+</html>
